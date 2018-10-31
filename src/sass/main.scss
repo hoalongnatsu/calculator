@@ -1,0 +1,58 @@
+$color-gray: #E5E7E9;
+$color-orange: #F5B041;
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   padding: 2rem;
+}
+
+.calculator {
+   height: 90vh;
+
+   .container-calculartor {
+      width: 40%;
+      margin: 0 auto;
+
+      .display {
+         &__number {
+            font-size: 3rem;
+            padding: 1rem;
+            height: 6.5rem;
+         }
+
+         &__result {
+            font-size: 5rem;
+            padding: 1rem;
+         }
+      }
+
+      .keyboard {
+
+         .number {
+            padding: 2rem;
+            background: $color-gray;
+            font-size: 2rem;
+            transition: all .2s ease;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+            z-index: 0;
+
+            &:hover {
+               transform: scale(1.1);
+               cursor: pointer;
+               box-shadow: 1px 1px 5px black;
+               z-index: 1;
+               border: none;
+            }
+         }
+
+         .number:last-child {
+            background: $color-orange;
+            border-right: 1px solid black;
+         }
+      }
+   }
+}
